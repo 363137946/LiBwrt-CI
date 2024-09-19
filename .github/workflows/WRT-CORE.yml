@@ -103,9 +103,10 @@ jobs:
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
           ./scripts/feeds update -a && ./scripts/feeds install -a
-          make download -j8
+          make download -j$(nproc)
           #make -j8 V=s
-          make V=s -j$(nproc)
+          #make V=s -j$(nproc)
+          make -j$(nproc) || make -j1 V=s
           
       - name: Package Firmware
         run: |
