@@ -28,10 +28,10 @@ jobs:
       matrix:
         TARGET: [Qualcom]
         #SOURCE: [King-Of-Knights/openwrt-6.x]
-        SOURCE: [Albresky/OpenWrt-JDC-AX1800-Pro]
+        SOURCE: [363137946/OpenWrt-JDC-AX1800-Pro]
         include:
           #- SOURCE: King-Of-Knights/openwrt-6.x
-          - SOURCE: Albresky/OpenWrt-JDC-AX1800-Pro
+          - SOURCE: 363137946/OpenWrt-JDC-AX1800-Pro
             BRANCH: main
             THEME: argon
 
